@@ -1,0 +1,54 @@
+Version=59
+LANGUAGE=EN
+Folders=20
+Pages=24
+UIXlate=False, DebugUIXlate=False, Language=EN
+
+bento.css • 260429.060408
+contents.txt • 265829.055834
+index.adoc • Praxis Service Documentation
+manifest.txt • 260629.050633
+site.css • 260329.060353
+11_4Backup\contents.txt • 265829.055826
+11_4Backup\index.adoc • Backup
+17_46SQLBackupconfigura\contents.txt • 261629.051615
+17_46SQLBackupconfigura\index.adoc • SQL Backup configuration
+2_1Systemconfiguration\client-requirement.adoc • :imagesdir: img
+2_1Systemconfiguration\contents.txt • 265329.055353
+2_1Systemconfiguration\index.adoc • Requirements
+2_1Systemconfiguration\installation-and-support-requirements.adoc • :imagesdir: img
+2_1Systemconfiguration\port-requirement.adoc • :imagesdir: img
+2_1Systemconfiguration\server-requirement.adoc • :imagesdir: img
+3_2Installation\contents.txt • 262029.052004
+3_2Installation\index.adoc • Installation
+8_3FullAccessFolderRig\contents.txt • 261629.051654
+8_3FullAccessFolderRig\index.adoc • Full Access Folder Rights
+__pycache__\split_adoc_by_h2.cpython-39.pyc
+11_4Backup\12_41ExportFactoryData\contents.txt • 265829.045800
+11_4Backup\12_41ExportFactoryData\index.adoc • Export Factory Data
+11_4Backup\13_42ImportFactoryData\contents.txt • 265829.045800
+11_4Backup\13_42ImportFactoryData\index.adoc • Import Factory Data
+11_4Backup\14_43BackupDatabase\contents.txt • 265829.045800
+11_4Backup\14_43BackupDatabase\index.adoc • Backup Database
+11_4Backup\15_44RestoreDatabase\contents.txt • 265829.045800
+11_4Backup\15_44RestoreDatabase\index.adoc • Restore Database
+11_4Backup\16_45ScheduledBackup\contents.txt • 265829.045800
+11_4Backup\16_45ScheduledBackup\index.adoc • Scheduled Backup
+17_46SQLBackupconfigura\18_461TaskSchedulerDail\contents.txt • 265829.045800
+17_46SQLBackupconfigura\18_461TaskSchedulerDail\index.adoc • Task Scheduler Daily
+17_46SQLBackupconfigura\19_462SchedulerWeekly\contents.txt • 265829.045800
+17_46SQLBackupconfigura\19_462SchedulerWeekly\index.adoc • Scheduler Weekly
+17_46SQLBackupconfigura\20_463TaskSchedulerMont\contents.txt • 265829.045800
+17_46SQLBackupconfigura\20_463TaskSchedulerMont\index.adoc • Task Scheduler Monthly
+3_2Installation\4_21ServerInstallation\contents.txt • 262029.052023
+3_2Installation\4_21ServerInstallation\index.adoc • Server Installation
+8_3FullAccessFolderRig\10_32Sharedfolders\contents.txt • 265829.045800
+8_3FullAccessFolderRig\10_32Sharedfolders\index.adoc • Shared folders
+8_3FullAccessFolderRig\9_31Registry\contents.txt • 265729.045759
+8_3FullAccessFolderRig\9_31Registry\index.adoc • Registry
+3_2Installation\4_21ServerInstallation\5_211TruSmartCamMonito\contents.txt • 265729.045759
+3_2Installation\4_21ServerInstallation\5_211TruSmartCamMonito\index.adoc • TruSmartCam Monitor
+3_2Installation\4_21ServerInstallation\6_212LockTracker\contents.txt • 265729.045759
+3_2Installation\4_21ServerInstallation\6_212LockTracker\index.adoc • Lock Tracker
+3_2Installation\4_21ServerInstallation\7_213OpenGL\contents.txt • 265729.045759
+3_2Installation\4_21ServerInstallation\7_213OpenGL\index.adoc • OpenGL

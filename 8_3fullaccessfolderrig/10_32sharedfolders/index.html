@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Shared folders</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="123" height="50" /></div>
+        <div><p>TruSmartCAM Service Documentation</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Praxis Service Documentation</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../2_1systemconfiguration/index.html">Requirements</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../2_1systemconfiguration/server-requirement.html">Server Requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../2_1systemconfiguration/client-requirement.html">Client Requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../2_1systemconfiguration/port-requirement.html">Port Requirement</a></li>
+    <li><button class="tree blank"></button><a href="../../2_1systemconfiguration/installation-and-support-requirements.html">Installation and Support Requirements</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../3_2installation/index.html">Installation</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../3_2installation/4_21serverinstallation/index.html">Server Installation</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../3_2installation/4_21serverinstallation/5_211trusmartcammonito/index.html">TruSmartCam Monitor</a></li>
+      <li><button class="tree blank"></button><a href="../../3_2installation/4_21serverinstallation/6_212locktracker/index.html">Lock Tracker</a></li>
+      <li><button class="tree blank"></button><a href="../../3_2installation/4_21serverinstallation/7_213opengl/index.html">OpenGL</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Full Access Folder Rights</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../9_31registry/index.html">Registry</a></li>
+    <li><button class="tree blank"></button><a class="active" href="index.html">Shared folders</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../11_4backup/index.html">Backup</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../11_4backup/12_41exportfactorydata/index.html">Export Factory Data</a></li>
+    <li><button class="tree blank"></button><a href="../../11_4backup/13_42importfactorydata/index.html">Import Factory Data</a></li>
+    <li><button class="tree blank"></button><a href="../../11_4backup/14_43backupdatabase/index.html">Backup Database</a></li>
+    <li><button class="tree blank"></button><a href="../../11_4backup/15_44restoredatabase/index.html">Restore Database</a></li>
+    <li><button class="tree blank"></button><a href="../../11_4backup/16_45scheduledbackup/index.html">Scheduled Backup</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../17_46sqlbackupconfigura/index.html">SQL Backup configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../17_46sqlbackupconfigura/18_461taskschedulerdail/index.html">Task Scheduler Daily</a></li>
+    <li><button class="tree blank"></button><a href="../../17_46sqlbackupconfigura/19_462schedulerweekly/index.html">Scheduler Weekly</a></li>
+    <li><button class="tree blank"></button><a href="../../17_46sqlbackupconfigura/20_463taskschedulermont/index.html">Task Scheduler Monthly</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Full Access Folder Rights</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Shared folders</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Shared folders</h1>
+<div class="paragraph">
+<p>For TruTops Boost, the release TruTops_Shared is created on the server. By default, this release refers to the folder %ProgramData%\Trumpf\TruTops\Shared on the server. However, the folder can also be defined at a different storage location during the installation. Modification rights are assigned to users for this folder. The rights are inherited by the sub-folders.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image38.png" alt="image38" width="312" height="400"></span></p>
+</div>
+<div class="paragraph">
+<p>The MMC and pps network releases are also created. No additional rights have to be granted because the two folders are under the TruTops folder. The MMC release includes the released BNC programs and the setup plans in each of the corresponding machine folders. The machine folders should then be connected on the respective machine for access to the NC data. The pps folder is released for the data exchange of Fab.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image39.png" alt="image39" width="441" height="112"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image40.png" alt="image40" width="398" height="173"></span></p>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../9_31registry/index.html">Registry</a></span>
+ <span class="next"><a href="../../11_4backup/index.html">Backup</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>
