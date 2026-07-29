@@ -6,7 +6,7 @@ UIXlate=False, DebugUIXlate=False, Language=EN
 
 bento.css • 260429.060408
 contents.txt • 265829.055834
-index.adoc • Praxis Service Documentation
+index.adoc • Service Documentation
 manifest.txt • 260629.050633
 site.css • 260329.060353
 11_4Backup\contents.txt • 265829.055826
@@ -23,7 +23,6 @@ site.css • 260329.060353
 3_2Installation\index.adoc • Installation
 8_3FullAccessFolderRig\contents.txt • 261629.051654
 8_3FullAccessFolderRig\index.adoc • Full Access Folder Rights
-__pycache__\split_adoc_by_h2.cpython-39.pyc
 11_4Backup\12_41ExportFactoryData\contents.txt • 265829.045800
 11_4Backup\12_41ExportFactoryData\index.adoc • Export Factory Data
 11_4Backup\13_42ImportFactoryData\contents.txt • 265829.045800
