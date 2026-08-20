@@ -1,0 +1,586 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Server Installation</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="123" height="50" /></div>
+        <div><p>TruSmartCAM Service Documentation</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">TruSmartCAM ServiceDocu</a></li>
+  <li><button class="tree blank"></button><a href="../architecture.html">Architecture</a></li>
+  <li><button class="tree blank"></button><a href="../workflow.html">Basic Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../2_1systemconfiguration/index.html">Requirements</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../2_1systemconfiguration/server-requirement.html">Server Requirement</a></li>
+    <li><button class="tree blank"></button><a href="../2_1systemconfiguration/client-requirement.html">Client Requirement</a></li>
+    <li><button class="tree blank"></button><a href="../2_1systemconfiguration/port-requirement.html">Port Requirement</a></li>
+    <li><button class="tree blank"></button><a href="../2_1systemconfiguration/installation-and-support-requirements.html">Installation and Support Requirements</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Installation</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a class="active" href="server.html">Server Installation</a></li>
+    <li><button class="tree blank"></button><a href="client.html">Client Installation</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="addon/index.html">Add-on Installation and Configuration</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="addon/5_211trusmartcammonito/index.html">TruSmartCam Monitor</a></li>
+      <li><button class="tree blank"></button><a href="addon/6_212locktracker/index.html">Lock Tracker</a></li>
+      <li><button class="tree blank"></button><a href="addon/7_213opengl/index.html">OpenGL</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8_3fullaccessfolderrig/index.html">Full Access Folder Rights</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8_3fullaccessfolderrig/9_31registry/index.html">Registry</a></li>
+    <li><button class="tree blank"></button><a href="../8_3fullaccessfolderrig/10_32sharedfolders/index.html">Shared folders</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../11_4backup/index.html">Backup</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../11_4backup/12_41exportfactorydata/index.html">Export Factory Data</a></li>
+    <li><button class="tree blank"></button><a href="../11_4backup/13_42importfactorydata/index.html">Import Factory Data</a></li>
+    <li><button class="tree blank"></button><a href="../11_4backup/14_43backupdatabase/index.html">Backup Database</a></li>
+    <li><button class="tree blank"></button><a href="../11_4backup/15_44restoredatabase/index.html">Restore Database</a></li>
+    <li><button class="tree blank"></button><a href="../11_4backup/16_45scheduledbackup/index.html">Scheduled Backup</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../17_46sqlbackupconfigura/index.html">SQL Backup configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../17_46sqlbackupconfigura/18_461taskschedulerdail/index.html">Task Scheduler Daily</a></li>
+    <li><button class="tree blank"></button><a href="../17_46sqlbackupconfigura/19_462schedulerweekly/index.html">Scheduler Weekly</a></li>
+    <li><button class="tree blank"></button><a href="../17_46sqlbackupconfigura/20_463taskschedulermont/index.html">Task Scheduler Monthly</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../20_diagnosis/index.html">Diagnosis support</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../20_diagnosis/pserver/index.html">PServer</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Installation</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="server.html">Server Installation</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Server Installation</h1>
+<div class="ulist">
+<ul>
+<li>
+<p>Select Installation Type.</p>
+</li>
+<li>
+<p>Launch the <strong>TruSmartCAM Installer</strong>.</p>
+</li>
+<li>
+<p>In the Installation Type screen:</p>
+</li>
+<li>
+<p>Select Server</p>
+</li>
+<li>
+<p>Click Next.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image2.png" alt="image2" width="384" height="316"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The setup displays the components to be installed:</p>
+</li>
+<li>
+<p>Verify that Install type = Server.</p>
+</li>
+<li>
+<p>Click Install.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image3.png" alt="image3" width="384" height="316"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The installation process starts.</p>
+</li>
+<li>
+<p>The system begins installing <strong>TruSmartCAM Prerequisites</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image4.png" alt="image4" width="382" height="314"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the Select Additional Tasks screen:</p>
+</li>
+<li>
+<p>Install Excel driver.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image5.png" alt="image5" width="384" height="316"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Review the selected additional task.</p>
+</li>
+<li>
+<p>Click Install.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image6.png" alt="image6" width="382" height="318"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image7.png" alt="image7" width="384" height="316"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image8.png" alt="image8" width="384" height="318"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The system installs required components such as:</p>
+</li>
+<li>
+<p>Visual C++ Redistributable.</p>
+</li>
+<li>
+<p>.NET Framework.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image9.png" alt="image9" width="388" height="320"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Progress bars will be displayed during installation.</p>
+</li>
+<li>
+<p>Wait until all components are installed.</p>
+</li>
+<li>
+<p>Click <strong>Cancel</strong> only if you want to abort installation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image10.png" alt="image10" width="382" height="314"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The system starts installing <strong>Microsoft ASP.NET Core Runtime</strong>.</p>
+</li>
+<li>
+<p>Wait for the installation to complete automatically.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image11.png" alt="image11" width="534" height="408"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>After installation, the Completion Wizard is displayed.</p>
+</li>
+<li>
+<p>Select one of the following options:</p>
+</li>
+<li>
+<p>Yes, restart the computer now (Recommended)</p>
+</li>
+<li>
+<p>No, I will restart the computer later</p>
+</li>
+<li>
+<p>Click Finish.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image12.png" alt="image12" width="382" height="316"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The installer proceeds with <strong>TRUMPF LicenseExpert</strong> installation.</p>
+</li>
+<li>
+<p>Wait while the setup initializes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image13.png" alt="image13" width="382" height="320"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the LicenseExpert configuration screen:</p>
+</li>
+<li>
+<p>Select <strong>Set up this computer as license server</strong> <em>(</em>for Server setup)</p>
+</li>
+<li>
+<p>If configuring as client (optional case):</p>
+</li>
+<li>
+<p>Select <strong>Set up this computer as license client</strong></p>
+</li>
+<li>
+<p>Enter the server name (e.g., LAP730018 or localhost)</p>
+</li>
+<li>
+<p>Click Next.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image14.png" alt="image14" width="384" height="312"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <strong>Install</strong> to proceed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image15.png" alt="image15" width="386" height="318"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The installer extracts required files.</p>
+</li>
+<li>
+<p>The installer extracts required files.</p>
+</li>
+<li>
+<p>TRUMPF Licensing Runtime Environment<br>
+are installed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image16.png" alt="image16" width="380" height="312"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image17.png" alt="image17" width="382" height="314"></span></p>
+</div>
+<div class="paragraph">
+<p>ï‚· Additional runtime components are installed, CodeMeter Runtime.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Do not interrupt the process.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image18.png" alt="image18" width="380" height="314"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The License Expert Setup Wizard completes.</p>
+</li>
+<li>
+<p>Click <strong>Finish</strong> to exit the setup.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image19.png" alt="image19" width="384" height="316"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The installer proceeds with <strong>SQL Server Express</strong> installation.</p>
+</li>
+<li>
+<p>Wait while the setup initializes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image20.png" alt="image20" width="386" height="316"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enter the database details:</p>
+</li>
+<li>
+<p>Click Next.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image21.png" alt="image21" width="386" height="316"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If a message appears: Existing instance detected.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong> to continue.</p>
+</li>
+<li>
+<p>The installer will use the existing instance.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image22.png" alt="image22" width="384" height="314"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Review the configuration.</p>
+</li>
+<li>
+<p>Click <strong>Install</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image23.png" alt="image23" width="382" height="316"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SQL Server files are extracted and installed.</p>
+</li>
+<li>
+<p>Wait until installation completes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image24.png" alt="image24" width="384" height="316"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click <strong>Finish</strong> after installation is complete.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image25.png" alt="image25" width="384" height="312"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The installer begins installing the <strong>TruSmartCAM Application</strong>.</p>
+</li>
+<li>
+<p>Wait for the process to complete.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image26.png" alt="image26" width="388" height="314"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Read the license agreement.</p>
+</li>
+<li>
+<p>Select <strong>I accept the agreement</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image27.png" alt="image27" width="380" height="312"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose components to install.</p>
+</li>
+<li>
+<p>Default <strong>Full Installation</strong> is recommended.</p>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image28.png" alt="image28" width="382" height="312"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select additional options:</p>
+</li>
+<li>
+<p>Enable <strong>Create a desktop shortcut.</strong></p>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image29.png" alt="image29" width="380" height="312"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Review selected components.</p>
+</li>
+<li>
+<p>Click <strong>Install</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image30.png" alt="image30" width="382" height="316"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Files are extracted and installed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image31.png" alt="image31" width="384" height="312"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select <strong>Launch TruSmartCAM.</strong></p>
+</li>
+<li>
+<p>Click <strong>Finish</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image32.png" alt="image32" width="382" height="314"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>On first launch, configure the database.</p>
+</li>
+<li>
+<p>Click OK.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image33.png" alt="image33" width="601" height="357"></span></p>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="prerequisites.html">Prerequisites</a></span>
+ <span class="next"><a href="client.html">Client Installation</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

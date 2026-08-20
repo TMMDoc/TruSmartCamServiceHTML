@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>Service Documentation</title>
+  <title>TruSmartCAM ServiceDocu</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -22,7 +22,9 @@
         <nav id="site-nav">
             <div class="treesite">
  <ul>
-  <li><button class="tree blank"></button><a class="active" href="index.html">Service Documentation</a></li>
+  <li><button class="tree blank"></button><a class="active" href="index.html">TruSmartCAM ServiceDocu</a></li>
+  <li><button class="tree blank"></button><a href="architecture.html">Architecture</a></li>
+  <li><button class="tree blank"></button><a href="workflow.html">Basic Workflow</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="2_1systemconfiguration/index.html">Requirements</a>
@@ -37,13 +39,16 @@
    <button class="tree closed"></button>
    <a href="3_2installation/index.html">Installation</a>
    <ul class="hide">
+    <li><button class="tree blank"></button><a href="3_2installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="3_2installation/server.html">Server Installation</a></li>
+    <li><button class="tree blank"></button><a href="3_2installation/client.html">Client Installation</a></li>
     <li>
      <button class="tree closed"></button>
-     <a href="3_2installation/4_21serverinstallation/index.html">Server Installation</a>
+     <a href="3_2installation/addon/index.html">Add-on Installation and Configuration</a>
      <ul class="hide">
-      <li><button class="tree blank"></button><a href="3_2installation/4_21serverinstallation/5_211trusmartcammonito/index.html">TruSmartCam Monitor</a></li>
-      <li><button class="tree blank"></button><a href="3_2installation/4_21serverinstallation/6_212locktracker/index.html">Lock Tracker</a></li>
-      <li><button class="tree blank"></button><a href="3_2installation/4_21serverinstallation/7_213opengl/index.html">OpenGL</a></li>
+      <li><button class="tree blank"></button><a href="3_2installation/addon/5_211trusmartcammonito/index.html">TruSmartCam Monitor</a></li>
+      <li><button class="tree blank"></button><a href="3_2installation/addon/6_212locktracker/index.html">Lock Tracker</a></li>
+      <li><button class="tree blank"></button><a href="3_2installation/addon/7_213opengl/index.html">OpenGL</a></li>
      </ul>
     </li>
    </ul>
@@ -76,6 +81,13 @@
     <li><button class="tree blank"></button><a href="17_46sqlbackupconfigura/20_463taskschedulermont/index.html">Task Scheduler Monthly</a></li>
    </ul>
   </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="20_diagnosis/index.html">Diagnosis support</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="20_diagnosis/pserver/index.html">PServer</a></li>
+   </ul>
+  </li>
  </ul>
 </div>
 
@@ -88,14 +100,14 @@
   </button>
  </div>
  <div>
-  <a href="index.html">Service Documentation</a>
+  <a href="index.html">TruSmartCAM ServiceDocu</a>
  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Service Documentation</h1>
+                        <h1>TruSmartCAM ServiceDocu</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph text-center">
@@ -105,8 +117,34 @@
 <p>This document contains proprietary and confidential information intended solely for authorized employees and approved internal stakeholders.
 Unauthorized access, copying, distribution, or disclosure is prohibited.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_document_information">Document Information</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Document: Praxis Service Documentation</p>
+</li>
+<li>
+<p>Classification: Confidential, Internal</p>
+</li>
+<li>
+<p>Owner: Service Operations Team</p>
+</li>
+<li>
+<p>Effective Date: 2026-07-29</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_purpose">Purpose</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>This manual provides procedures and guidance for installing, configuring, maintaining, backing up, and restoring TruSmartCAM service components in supported environments.</p>
+<p>This manual provides procedures and guidance for installing, configuring, maintaining, backing up, and restoring Praxis service components in supported environments.</p>
 </div>
 </div>
 </div>
@@ -114,11 +152,22 @@ Unauthorized access, copying, distribution, or disclosure is prohibited.</p>
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_document_information">Document Information</a>
+  </li>
+  <li level="1">
+   <a href="#_purpose">Purpose</a>
+  </li>
+ </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">
- <span class="next"><a href="2_1systemconfiguration/index.html">Requirements</a></span>
+ <span class="next"><a href="architecture.html">Architecture</a></span>
 </nav>
 
         </div>
@@ -133,7 +182,7 @@ Unauthorized access, copying, distribution, or disclosure is prohibited.</p>
         </div>
         <div class="middle"></div>
         <div class="right">
-            <p>Compiled 2026.07.29 by Bento 59</p>
+            <p>Compiled 2026.08.20 by Bento 59</p>
             <img src="res/bento.png" />
         </div>
     </footer>

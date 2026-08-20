@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Architecture</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="123" height="50" /></div>
+        <div><p>TruSmartCAM Service Documentation</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">TruSmartCAM ServiceDocu</a></li>
+  <li><button class="tree blank"></button><a class="active" href="architecture.html">Architecture</a></li>
+  <li><button class="tree blank"></button><a href="workflow.html">Basic Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="2_1systemconfiguration/index.html">Requirements</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="2_1systemconfiguration/server-requirement.html">Server Requirement</a></li>
+    <li><button class="tree blank"></button><a href="2_1systemconfiguration/client-requirement.html">Client Requirement</a></li>
+    <li><button class="tree blank"></button><a href="2_1systemconfiguration/port-requirement.html">Port Requirement</a></li>
+    <li><button class="tree blank"></button><a href="2_1systemconfiguration/installation-and-support-requirements.html">Installation and Support Requirements</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="3_2installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="3_2installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="3_2installation/server.html">Server Installation</a></li>
+    <li><button class="tree blank"></button><a href="3_2installation/client.html">Client Installation</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="3_2installation/addon/index.html">Add-on Installation and Configuration</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="3_2installation/addon/5_211trusmartcammonito/index.html">TruSmartCam Monitor</a></li>
+      <li><button class="tree blank"></button><a href="3_2installation/addon/6_212locktracker/index.html">Lock Tracker</a></li>
+      <li><button class="tree blank"></button><a href="3_2installation/addon/7_213opengl/index.html">OpenGL</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="8_3fullaccessfolderrig/index.html">Full Access Folder Rights</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="8_3fullaccessfolderrig/9_31registry/index.html">Registry</a></li>
+    <li><button class="tree blank"></button><a href="8_3fullaccessfolderrig/10_32sharedfolders/index.html">Shared folders</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="11_4backup/index.html">Backup</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="11_4backup/12_41exportfactorydata/index.html">Export Factory Data</a></li>
+    <li><button class="tree blank"></button><a href="11_4backup/13_42importfactorydata/index.html">Import Factory Data</a></li>
+    <li><button class="tree blank"></button><a href="11_4backup/14_43backupdatabase/index.html">Backup Database</a></li>
+    <li><button class="tree blank"></button><a href="11_4backup/15_44restoredatabase/index.html">Restore Database</a></li>
+    <li><button class="tree blank"></button><a href="11_4backup/16_45scheduledbackup/index.html">Scheduled Backup</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="17_46sqlbackupconfigura/index.html">SQL Backup configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="17_46sqlbackupconfigura/18_461taskschedulerdail/index.html">Task Scheduler Daily</a></li>
+    <li><button class="tree blank"></button><a href="17_46sqlbackupconfigura/19_462schedulerweekly/index.html">Scheduler Weekly</a></li>
+    <li><button class="tree blank"></button><a href="17_46sqlbackupconfigura/20_463taskschedulermont/index.html">Task Scheduler Monthly</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="20_diagnosis/index.html">Diagnosis support</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="20_diagnosis/pserver/index.html">PServer</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="architecture.html">Architecture</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Architecture</h1>
+<div class="sect1">
+<h2 id="_overview">Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The runtime follows two guiding principles:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Database-as-server.</strong> Clients never open the database directly; every read/write and content
+(file) operation is marshalled to <strong>PServer</strong>.</p>
+</li>
+<li>
+<p><strong>Pull workflow.</strong> Heavy CAM work (import, tooling, nesting) is never done in the client. A client
+records an item and sets its state; background <strong>engine</strong> workers pull <code>ReadyTo*</code> work and process
+it, advancing the state as they go.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/architect.png" alt="Architecture" width="600">
+</div>
+<div class="title">Figure 1. Process topology</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Processes and their assemblies</caption>
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Process</th>
+<th class="tableblock halign-left valign-top">Project / assembly</th>
+<th class="tableblock halign-left valign-top">Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PServer.exe</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Server/PServer.csproj</code> (<strong>.NET Framework 4.8</strong>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database &amp; content server; Windows service</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PEngine.exe</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Engine/PEngine.csproj</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Background CAM worker (master + agents)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PMonitor.exe</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Monitor/PMonitor.csproj</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tray host; runs the engine master + monitoring UI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Prax.exe</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>App/Prax.csproj</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Main desktop client</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Prax.Console.exe</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Console/Prax.Console.csproj</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CLI / dev-utility client</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pserverthe_database_content_server">PServer&#8201;&#8212;&#8201;the database &amp; content server</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PServer is the single authority for all persisted state.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Runs as a <strong>Windows service</strong> when non-interactive or as  an <strong>interactive console</strong> with maintenance commands</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Responsibilities</div>
+<ul>
+<li>
+<p><strong>The only component that touches the database</strong></p>
+</li>
+<li>
+<p>Serves clients over a duplex channel</p>
+</li>
+<li>
+<p><strong>Eventing hub</strong>: <code>FireEvent</code> broadcasts  to subscribed clients.</p>
+</li>
+<li>
+<p><strong>Task concurrency</strong>: <code>AcquireTaskLock</code> / <code>CheckTaskLock</code> so two engines can  never process (e.g. nest) the same job.</p>
+</li>
+<li>
+<p>Sessions, licensing, and users.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_penginethe_cam_worker_master_agents">PEngine&#8201;&#8212;&#8201;the CAM worker (master + agents)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One executable, two roles.</p>
+</div>
+<div class="sect2">
+<h3 id="_agent_worker">Agent worker</h3>
+<div class="paragraph">
+<p>Launched as <code>PEngine.exe agentid=N</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Stands up a single <strong>STA worker thread with a scheduler</strong> (<code>STAScheduler</code>).</p>
+</li>
+<li>
+<p><code>AgentService.LibInit()</code> runs <code>PX.Init</code> + <code>PEngine.Login</code> + <strong><code>FX.Init</code></strong>  This is why CAM work lives here: nesting needs Flux&#8217;s message pump/runtime,
+which a bare host does not have.</p>
+</li>
+<li>
+<p><code>AgentService.Perform(WorkChunk)</code></p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>Import</code></th>
+<th class="tableblock halign-left valign-top"><code>PEngine.ImportPart</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bend</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PEngine.DoBending</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Cut</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PEngine.DoBulkCutting</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nest</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PEngine.DoNesting</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MiscQ</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PEngine.ProcessMiscQ</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_master_dispatcher">Master (dispatcher)</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Parses <code>agents=N chunks=M</code>.</p>
+</li>
+<li>
+<p><code>Server.Init()</code>&#8201;&#8212;&#8201;subscribes to <code>TaskSubmitted</code> and starts a <strong>heartbeat</strong> that writes
+<code>PXAgentBeat</code> every few seconds so other processes know the engines are alive.</p>
+</li>
+<li>
+<p>Loops in <code>Process()</code>:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>queries the DB for <code>ReadyToImport</code> / <code>ReadyToBend</code> / <code>ReadyToCut</code> parts and the nest queue,</p>
+</li>
+<li>
+<p>chunks them into <code>WorkChunk</code> s (<code>SubmitWork</code>),</p>
+</li>
+<li>
+<p><code>DispatchWorks</code> assigns each chunk to a free agent via <code>Agent.Get(i).Do(work)</code> (synchronous
+IPC), launching <code>PEngine.exe agentid=i</code> on demand (<code>Agent.AgentApp = PEngine.exe</code>).</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_pmonitortray_host_engine_master_orchestration">PMonitor&#8201;&#8212;&#8201;tray host, engine master &amp; orchestration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>monitoring UI in <code>Monitor/AgentMonitor.cs</code>; client-side helpers. The always-on system-tray app (single instance).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Hosts the engine master in-process.</strong> the dispatcher shows the pending-work queue and a live per-agent activity graph, and manages the agent
+pool.</p>
+</li>
+<li>
+<p><strong>Gated by mode/license</strong>: <code>CanRunEngine = SyncMode == 0 &amp;&amp; Lic.Engine</code>. It can instead run as a</p>
+</li>
+<li>
+<p>Also handles part <strong>drop-folder watching</strong>, config sync, and toast notifications.</p>
+</li>
+<li>
+<p>Clients start/stop/reach it through <code>PMonitor.Start</code> / <code>Stop</code> / <code>Login</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In practice <strong>PMonitor is the process that keeps the PEngine worker pool alive and fed</strong>, and
+provides the tray queue/heartbeat UI.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_clients">Clients</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Any process that connects to PServer for data and issues work. Clients do <strong>not</strong> perform CAM; they
+create/modify data through PServer and set an item&#8217;s state, then the engines pick it up.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>Prax.exe</code></strong>&#8201;&#8212;&#8201;the main WPF desktop app (jobs, parts, layouts, planning). Launches PMonitor if needed.</p>
+</li>
+<li>
+<p><strong><code>Prax.Console.exe</code></strong>&#8201;&#8212;&#8201;CLI / dev utility</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_they_cooperatethe_pull_workflow">How they cooperate&#8201;&#8212;&#8201;the pull workflow</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A client uploads a part / creates a job &#8594; PServer writes it with <code>StateID = ReadyToImport</code> and
+fires an event.</p>
+</li>
+<li>
+<p>The <strong>engine master</strong> (in PMonitor) sees pending <code>ReadyTo*</code> work, chunks it, and dispatches to a
+free <strong>PEngine agent</strong>.</p>
+</li>
+<li>
+<p>The agent imports &#8594; bend-tools &#8594; cut-tools &#8594; nests using Flux, writes results back through
+PServer, and advances the state (<code>ReadyToBend</code> &#8594; <code>ReadyToCut</code> &#8594; &#8230;&#8203; ; layouts to
+<code>ReviewLayout</code> / <code>LayoutOK</code>, etc.).</p>
+</li>
+<li>
+<p>PServer fires <code>StateChanged</code>; clients subscribed via <code>DBEvents.Watch</code> refresh their views.
+<code>PXAgentBeat</code> signals engine health; <strong>task locks</strong> stop two agents grabbing the same nest.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_overview">Overview</a>
+  </li>
+  <li level="1">
+   <a href="#_pserverthe_database_content_server">PServer&#8201;&#8212;&#8201;the database &amp; content server</a>
+  </li>
+  <li level="1">
+   <a href="#_penginethe_cam_worker_master_agents">PEngine&#8201;&#8212;&#8201;the CAM worker (master + agents)</a>
+  </li>
+  <li level="2">
+   <a href="#_agent_worker">Agent worker</a>
+  </li>
+  <li level="2">
+   <a href="#_master_dispatcher">Master (dispatcher)</a>
+  </li>
+  <li level="1">
+   <a href="#_pmonitortray_host_engine_master_orchestration">PMonitor&#8201;&#8212;&#8201;tray host, engine master &amp; orchestration</a>
+  </li>
+  <li level="1">
+   <a href="#_clients">Clients</a>
+  </li>
+  <li level="1">
+   <a href="#_how_they_cooperatethe_pull_workflow">How they cooperate&#8201;&#8212;&#8201;the pull workflow</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">TruSmartCAM ServiceDocu</a></span>
+ <span class="next"><a href="workflow.html">Basic Workflow</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    
+</body>
+</html>
