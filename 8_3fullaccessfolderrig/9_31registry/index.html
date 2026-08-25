@@ -55,7 +55,7 @@
   </li>
   <li>
    <button class="tree open"></button>
-   <a href="../index.html">Full Access Folder Rights</a>
+   <a href="../index.html">Folder Access Rights</a>
    <ul>
     <li><button class="tree blank"></button><a class="active" href="index.html">Registry</a></li>
     <li><button class="tree blank"></button><a href="../10_32sharedfolders/index.html">Shared folders</a></li>
@@ -81,13 +81,16 @@
     <li><button class="tree blank"></button><a href="../../17_46sqlbackupconfigura/20_463taskschedulermont/index.html">Task Scheduler Monthly</a></li>
    </ul>
   </li>
+  <li><button class="tree blank"></button><a href="../../19_update/index.html">Upgrade</a></li>
   <li>
    <button class="tree closed"></button>
    <a href="../../20_diagnosis/index.html">Diagnosis support</a>
    <ul class="hide">
     <li><button class="tree blank"></button><a href="../../20_diagnosis/pserver/index.html">PServer</a></li>
+    <li><button class="tree blank"></button><a href="../../20_diagnosis/pmonitor.html">PMonitor</a></li>
    </ul>
   </li>
+  <li><button class="tree blank"></button><a href="../../virus.html">Antivirus Exceptions</a></li>
  </ul>
 </div>
 
@@ -100,7 +103,7 @@
   </button>
  </div>
  <div>
-  <a href="../index.html">Full Access Folder Rights</a>
+  <a href="../index.html">Folder Access Rights</a>
  </div>
  <div>/</div>
  <div>
@@ -113,105 +116,124 @@
                     <article id="article">
                         <h1>Registry</h1>
 <div class="paragraph">
-<p>The registry entries previously created by the installation:Â </p>
+<p>The registry entries previously created by the installation:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>HKEY_LOCAL_MACHINE\SOFTWARE\de.trumpf.com\Installation\DeploymentManager\ComponentsÂ </p>
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\de.trumpf.com\Installation\DeploymentManager\Components</p>
 </li>
 <li>
 <p>HKEY_LOCAL_MACHINE\SOFTWARE\de.trumpf.com\Installation\Deploymen
 tManager\Products</p>
 </li>
 <li>
-<p>Are now stored by entries in Data.xml under the pathÂ C:\ProgramData\TRUMPF\Installation.</p>
+<p>Are now stored by entries in Data.xml under the path C:\ProgramData\TRUMPF\Installation.</p>
 </li>
 <li>
-<p>The installation stores information on installed components and products in this file. However, these keys only apply to the installation/uninstallation of the product, not the function of the product during the runtime.Â </p>
+<p>The installation stores information on installed components and products in this file. However, these keys only apply to the installation/uninstallation of the product, not the function of the product during the runtime.</p>
 </li>
 <li>
-<p>The MMC,Â ppsÂ andÂ TruTops_SharedÂ shared folders are entered under the path
-Â HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanmanServe r\SharesÂ 
-The entries exist in severalÂ ControlSetÂ folders.Â </p>
+<p>The MMC, pps and TruTops_Shared shared folders are entered under the path
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanmanServe   r\Shares
+The entries exist in several ControlSet folders.</p>
 </li>
 <li>
-<p>The following keys are set during the installation and areÂ requiredÂ during the runtime.Â Â 
-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\trumpf\TruTopsÂ FabÂ 
-The keys:Â 
-isMonitorÂ = 0Â 
-isPPSÂ = 0Â </p>
+<p>The following keys are set during the installation and are required during the runtime.
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\trumpf\TruTops Fab</p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The keys:</p>
+</div>
+<div class="paragraph">
+<p>isMonitor = 0</p>
+</div>
+<div class="paragraph">
+<p>isPPS = 0</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p>This settingÂ identifiesÂ the Fab server as theÂ TruTopsÂ Boost server.Â 
-Furthermore, the ODBC entry from Cut is set in the registry:Â 
-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\TP_V010_V010000Â </p>
+<p>This setting identifies the Fab server as the TruTops Boost server.
+Furthermore, the ODBC entry from Cut is set in the registry:
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\TP_V010_V010000</p>
 </li>
 <li>
 <p>The entry TPS_V010_V010000 depends, of course, on the installed version
-ofÂ TruTopsÂ BoostÂ </p>
+of TruTops Boost</p>
 </li>
 <li>
-<p>If theÂ DataManagerÂ is started in administrator mode, it writes the following
-entries:Â 
-HKEY_CLASSES_ROOT\.arv\shell\TrumpfÂ ConvertÂ 
-HKEY_CLASSES_ROOT\.arv\shell\TrumpfÂ ImportÂ 
-HKEY_CLASSES_ROOT\.arvx\shell\TrumpfÂ ImportÂ </p>
-</li>
-<li>
-<p>However, these keys are written only if the settings for the Explorer extension are activated in theÂ DataManagerÂ (see screenshot)Â </p>
+<p>If the DataManager is started in administrator mode, it writes the following
+entries:</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/image34.png" alt="image34" width="566" height="255"></span>Â </p>
+<p>HKEY_CLASSES_ROOT\.arv\shell\Trumpf Convert</p>
+</div>
+<div class="paragraph">
+<p>HKEY_CLASSES_ROOT\.arv\shell\Trumpf Import</p>
+</div>
+<div class="paragraph">
+<p>HKEY_CLASSES_ROOT\.arvx\shell\Trumpf Import</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>ByÂ settingÂ these entries,Â arvxÂ files can be selected directly from Explorer and importedÂ by means ofÂ theÂ DataManager.Â </p>
+<p>However, these keys are written only if the settings for the Explorer extension are activated in theDataManager(see screenshot)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/image35.png" alt="image35" width="318" height="121"></span>Â </p>
+<p><span class="image"><img src="img/image34.png" alt="image34" width="566" height="255"></span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Cryptic folders, in which the uninstallation information is stored, are created under the path HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\MicrosoftÂ \Windows\CurrentVersion\UninstallÂ .Â </p>
+<p>Bysettingthese entries,arvxfiles can be selected directly from Explorer and importedby means oftheDataManager.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/image36.png" alt="image36" width="592" height="206"></span>Â </p>
+<p><span class="image"><img src="img/image35.png" alt="image35" width="318" height="121"></span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Different folders are created for the individual, installed modules under the pathÂ 
-HKEY_LOCAL_MACHINE\SOFTWARE\de.trumpf.com\Installation\
-DeploymentManager\Components\Â </p>
-</li>
-<li>
-<p>If a module isÂ deletedÂ manually, the corresponding entry must beÂ deletedÂ here in order, for example, to install an older version.Â </p>
-</li>
-<li>
-<p>A folder, in which information on the installation time, installation type and version is stored, is created for each installation under the path HKEY_LOCAL_MACHINE\SOFTWARE\de.trumpf.com\Installation\DeploymentManager\ProduktsÂ Â </p>
-</li>
-<li>
-<p>These data are not important for operation.Â </p>
-</li>
-<li>
-<p>Folders with cryptic names, whichÂ containÂ information from MS Installer, are created under the pathÂ Â HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\ProduktsÂ Â </p>
-</li>
-<li>
-<p>For example, the path from which the installation was performed.Â </p>
+<p>Cryptic folders, in which the uninstallation information is stored, are created under the path HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/image37.png" alt="image37" width="562" height="235"></span>Â </p>
+<p><span class="image"><img src="img/image36.png" alt="image36" width="592" height="206"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Different folders are created for the individual, installed modules under the path
+HKEY_LOCAL_MACHINE\SOFTWARE\de.trumpf.com\Installation\DeploymentManager\Components\</p>
+</li>
+<li>
+<p>If a module isdeletedmanually, the corresponding entry must bedeletedhere in order, for example, to install an older version.</p>
+</li>
+<li>
+<p>A folder, in which information on the installation time, installation type and version is stored, is created for each installation under the path HKEY_LOCAL_MACHINE\SOFTWARE\de.trumpf.com\Installation\DeploymentManager\Produkts</p>
+</li>
+<li>
+<p>These data are not important for operation.</p>
+</li>
+<li>
+<p>Folders with cryptic names, whichcontaininformation from MS Installer, are created under the pathHKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Produkts</p>
+</li>
+<li>
+<p>For example, the path from which the installation was performed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="img/image37.png" alt="image37" width="562" height="235"></span></p>
 </div>
 
                     </article>
@@ -221,7 +243,7 @@ DeploymentManager\Components\Â </p>
                 </div>
             </div>
             <nav class="pagination">
- <span class="prev"><a href="../index.html">Full Access Folder Rights</a></span>
+ <span class="prev"><a href="../index.html">Folder Access Rights</a></span>
  <span class="next"><a href="../10_32sharedfolders/index.html">Shared folders</a></span>
 </nav>
 
