@@ -1,0 +1,891 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="res/bento.css">
+  <link rel="stylesheet" href="res/site.css">
+  <link rel="stylesheet" href="res/tree.css">
+  <link rel="stylesheet" href="res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Error codes</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="img/logo.png" width="123" height="50" /></div>
+        <div><p>TruSmartCAM Service Documentation</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="index.html">TruSmartCAM ServiceDocu</a></li>
+  <li><button class="tree blank"></button><a href="architecture.html">Architecture</a></li>
+  <li><button class="tree blank"></button><a href="workflow.html">Basic Workflow</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="2_1systemconfiguration/index.html">Requirements</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="2_1systemconfiguration/server-requirement.html">Server Requirement</a></li>
+    <li><button class="tree blank"></button><a href="2_1systemconfiguration/client-requirement.html">Client Requirement</a></li>
+    <li><button class="tree blank"></button><a href="2_1systemconfiguration/port-requirement.html">Port Requirement</a></li>
+    <li><button class="tree blank"></button><a href="2_1systemconfiguration/installation-and-support-requirements.html">Installation and Support Requirements</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="3_2installation/index.html">Installation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="3_2installation/prerequisites.html">Prerequisites</a></li>
+    <li><button class="tree blank"></button><a href="3_2installation/server.html">Server Installation</a></li>
+    <li><button class="tree blank"></button><a href="3_2installation/client.html">Client Installation</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="3_2installation/addon/index.html">Add-on Installation and Configuration</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="3_2installation/addon/5_211trusmartcammonito/index.html">TruSmartCam Monitor</a></li>
+      <li><button class="tree blank"></button><a href="3_2installation/addon/6_212locktracker/index.html">Lock Tracker</a></li>
+      <li><button class="tree blank"></button><a href="3_2installation/addon/7_213opengl/index.html">OpenGL</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="8_3fullaccessfolderrig/index.html">Folder Access Rights</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="8_3fullaccessfolderrig/9_31registry/index.html">Registry</a></li>
+    <li><button class="tree blank"></button><a href="8_3fullaccessfolderrig/10_32sharedfolders/index.html">Shared folders</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="11_4backup/index.html">Backup</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="11_4backup/12_41exportfactorydata/index.html">Export Factory Data</a></li>
+    <li><button class="tree blank"></button><a href="11_4backup/13_42importfactorydata/index.html">Import Factory Data</a></li>
+    <li><button class="tree blank"></button><a href="11_4backup/14_43backupdatabase/index.html">Backup Database</a></li>
+    <li><button class="tree blank"></button><a href="11_4backup/15_44restoredatabase/index.html">Restore Database</a></li>
+    <li><button class="tree blank"></button><a href="11_4backup/16_45scheduledbackup/index.html">Scheduled Backup</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="17_46sqlbackupconfigura/index.html">SQL Backup configuration</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="17_46sqlbackupconfigura/18_461taskschedulerdail/index.html">Task Scheduler Daily</a></li>
+    <li><button class="tree blank"></button><a href="17_46sqlbackupconfigura/19_462schedulerweekly/index.html">Scheduler Weekly</a></li>
+    <li><button class="tree blank"></button><a href="17_46sqlbackupconfigura/20_463taskschedulermont/index.html">Task Scheduler Monthly</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a class="active" href="errorcodes.html">Error codes</a></li>
+  <li><button class="tree blank"></button><a href="19_update/index.html">Upgrade</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="20_diagnosis/index.html">Diagnosis support</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="20_diagnosis/pserver/index.html">PServer</a></li>
+    <li><button class="tree blank"></button><a href="20_diagnosis/pmonitor.html">PMonitor</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="virus.html">Antivirus Exceptions</a></li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="errorcodes.html">Error codes</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Error codes</h1>
+<div class="sect1">
+<h2 id="_praxis_logging_error_code_descriptions">Praxis logging error code descriptions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Application level: 1000 - Application (Default).</p>
+</div>
+<div class="sect2">
+<h3 id="_audit_2000_2999_security_and_traceability">Audit (2000-2999): Security and traceability</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Log Code</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Audit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session started from IP address</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session stopped from IP address</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2003</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session denied from IP address</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2004</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">New user added with role</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2005</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User signed into application from IP address</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2006</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User signed out from application from IP address</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2007</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password changed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_setup_3000_3999_database_installation_and_updater">Setup (3000-3999): Database, installation, and updater</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Log Code</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Setup</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis database is not installed. Installing database</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis database installed successfully</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3003</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Applying Praxis updates</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3004</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis update completed successfully</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3005</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis update failed with error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3006</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creating database</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3007</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database created successfully</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3008</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database is out of date. Updating database</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3009</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database updated successfully</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3010</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Factory reset is done, please restart Praxis</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3011</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis backup saved at</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3012</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database restored successfully. Restart the application.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3013</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis license contains too many machines. A few have been installed, install the remaining interactively.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3014</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Job items customer update failed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3015</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Job items created and modified timestamp update failed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3016</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis build {0} available to Install</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis build {0} downloaded</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Network error. Retry later!</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A newer Praxis version {0} is available for download</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis cannot create the database access account</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_lifetime_4000_4999_applicationserver_startup_and_shutdown">Lifetime (4000-4999): Application/server startup and shutdown</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Log Code</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lifetime</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starting Praxis server</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis server is running</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4003</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stopping Praxis server</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4004</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis server stopped</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4005</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis startup failed with errors: {0}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4006</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starting {0} Engine instances&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4007</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database created successfully</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4008</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initializing Application configuration&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4009</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linking Right Angle&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4010</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linking Vulcan&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4011</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starting Engine {0} &#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4012</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stopping Engine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4013</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine {0} start failed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4014</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engines are not running</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4015</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine startup error: {0}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4016</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine beat failed: {0}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stopping 4 Engine instances&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starting Flux&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stopping Flux</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stopping PMonitor&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starting Agent 1 &#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stopping Agent 1 &#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4023</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starting MetaCAM</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4024</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stopping MetaCAM</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_license_5000_5999_license_validation">License (5000-5999): License validation</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Log Code</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License error: Invalid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Praxis license has expired</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_security_6000_6999_authentication_and_permissions">Security (6000-6999): Authentication and permissions</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Log Code</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Welcome Test user!</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authentication error</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6003</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Some of the application permissions are restricted</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6004</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Successfully logged out</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6005</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Insufficient permission to edit: Factory settings</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_workflow_7000_7999_workflow_parts_jobs_and_layouts">Workflow (7000-7999): Workflow parts, jobs, and layouts</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Log Code</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Workflow</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A few layout-parts are still out-of-date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Some parts remain unnested</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7003</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The part 00.01 is linked to the jobs/orders/assemblies. It cannot be deleted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7004</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The job Job-1 has items in processing state. It cannot be deleted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7005</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This job items are in processing state. It cannot be reset.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7006</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This job item is in processing state. It cannot be reset.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7007</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid job report export location</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7008</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program outputs exported to the target folders.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7009</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text markings could not be placed on a few layouts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7010</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cannot change LTT. Selected layouts have different machines and/or raw materials.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7011</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Heat number was not assigned to one or more layouts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7012</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PPS: Exported C:\temp\PPS.xml</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7013</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exported C:\temp\Jobs.csv</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7014</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PPS: Directory not found C:\PPS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7015</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auto tasking</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7016</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processing 10 items from 20 queue</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Task processing error: Bending</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_data_8000_8999_parts_libraries_files_and_formats">Data (8000-8999): Parts, libraries, files, and formats</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Log Code</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10 part(s) added/updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unsupported file format: .dwg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8003</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A file named 00.01 already exists</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8004</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File saved at C:\temp</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8005</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File type(s) {0} are not valid assembly formats</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8006</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unsupported data format: C:\UnKnownSchema.csv</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8007</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File upload error: error.dxf</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_config_9000_9999_machines_factory_data_and_settings">Config (9000-9999): Machines, factory data, and settings</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Log Code</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Config</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine {0} added</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine {0} updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9003</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine {0} updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9004</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Material {0} added</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9005</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Material {0} updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9006</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Material '{0}' with all its raw-materials and sheets deleted</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9007</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Raw-material '{0}' added</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9008</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Raw-material '{0}' updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9009</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Raw-material '{0}' with all its sheets deleted</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9010</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sheet '{0}' added</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9011</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sheet '{0}' updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9012</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sheet '{0}' deleted</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9013</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'{0}' sheets, including '{1}' were deleted</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9014</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Materials/Sheets imported</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9015</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0} is in use and therefore cannot be deleted</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9016</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine instance '{0}' removed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine instance '{0}' added</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The machine '{0}' has active layouts in queue.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program number range is empty. Fixed program number will be used.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CAD routes saved to '{0}'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'{0}' is already mapped to '{1}'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Test mail sent successfully</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9023</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Test mail failed. {0}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9024</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Config checked-out for editing by: {0} on {1}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9025</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid operation '{0}'</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9026</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sheet import error: {0}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9027</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The selected image is not the recommended size 64x64. Images at the recommended size will appear sharper and clearer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9028</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">New customer '{0}' added</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9029</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'{0}' new customers including '{1}' were added</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9030</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Customer '{0}' updated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9031</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Customer '{0}' deleted</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_system_10000_10999_connectivity_hardware_and_external_tools">System (10000-10999): Connectivity, hardware, and external tools</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Log Code</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Failed to connect to application server</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cannot continue. Fatal error: {0}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10003</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MetaCAM is missing. Interactive editing of cutting programs is disabled</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10004</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database connection succeeded</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10005</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Failed to connect to the database</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10006</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Local time and Server time are out-of-sync by {0} seconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10007</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This feature needs graphics card with OpenGL 3.2 or above (installed GL version: '{0}')</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10008</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine runtime error: {0}</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Additional logging messages may be added to these categories. Each new message will be assigned the next available consecutive error code. Existing error codes will remain unchanged.</p>
+</li>
+<li>
+<p>The placeholders {0} and {1} will be replaced with text supplied by the Praxis application for the corresponding log message.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+                    </article>
+                </div>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#_praxis_logging_error_code_descriptions">Praxis logging error code descriptions</a>
+  </li>
+  <li level="2">
+   <a href="#_audit_2000_2999_security_and_traceability">Audit (2000-2999): Security and traceability</a>
+  </li>
+  <li level="2">
+   <a href="#_setup_3000_3999_database_installation_and_updater">Setup (3000-3999): Database, installation, and updater</a>
+  </li>
+  <li level="2">
+   <a href="#_lifetime_4000_4999_applicationserver_startup_and_shutdown">Lifetime (4000-4999): Application/server startup and shutdown</a>
+  </li>
+  <li level="2">
+   <a href="#_license_5000_5999_license_validation">License (5000-5999): License validation</a>
+  </li>
+  <li level="2">
+   <a href="#_security_6000_6999_authentication_and_permissions">Security (6000-6999): Authentication and permissions</a>
+  </li>
+  <li level="2">
+   <a href="#_workflow_7000_7999_workflow_parts_jobs_and_layouts">Workflow (7000-7999): Workflow parts, jobs, and layouts</a>
+  </li>
+  <li level="2">
+   <a href="#_data_8000_8999_parts_libraries_files_and_formats">Data (8000-8999): Parts, libraries, files, and formats</a>
+  </li>
+  <li level="2">
+   <a href="#_config_9000_9999_machines_factory_data_and_settings">Config (9000-9999): Machines, factory data, and settings</a>
+  </li>
+  <li level="2">
+   <a href="#_system_10000_10999_connectivity_hardware_and_external_tools">System (10000-10999): Connectivity, hardware, and external tools</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="17_46sqlbackupconfigura/20_463taskschedulermont/index.html">Task Scheduler Monthly</a></span>
+ <span class="next"><a href="19_update/index.html">Upgrade</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="res/index.js"></script>
+    <script src="res/files.js"></script>
+    <script src="res/site.js"></script>
+
+    
+</body>
+</html>
